@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/caiocamposdev/assets/main/banners/data-etl-coffee-banner.png" alt="ETL Coffee Project Banner" width="100%">
+<img src="https://fdr.com.br/wp-content/uploads/2024/09/preco-do-cafe.jpg" width="600" />
 </p>
 
 <h1 align="center">☕ Projeto de ETL & BI — Nova Cafeteria</h1>
