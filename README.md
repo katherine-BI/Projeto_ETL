@@ -82,9 +82,3 @@ Segue o fluxo de trabalho detalhado para replicação do projeto:
 ### 5. Resultados e Prints
 
 O *dashboard* final do Power BI contém visualizações interativas que permitem explorar as tendências de consumo e validar as hipóteses de negócio.
-
-> **Nota:** Os prints devem ser inseridos aqui, representando as telas do Power BI que respondem às hipóteses.
-
-* [**Print 1:** Dashboard Principal com KPIs e filtros]
-* [**Print 2:** Gráfico de Bebida Favorita por Gênero (Resposta à Hipótese 1)]
-* [**Print 3:** Gráfico de Top 10 Sabores Mais Consumidos (Resposta à Hipótese 4)]
