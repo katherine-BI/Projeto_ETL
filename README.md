@@ -1,8 +1,47 @@
-## ☕ Projeto ETL e Visualização de Dados: Desafio de Business Intelligence
+<p align="center">
+  <img src="https://raw.githubusercontent.com/caiocamposdev/assets/main/banners/data-etl-coffee-banner.png" alt="ETL Coffee Project Banner" width="100%">
+</p>
+
+<h1 align="center">☕ Projeto de ETL & BI — Nova Cafeteria</h1>
+<h3 align="center">Bootcamp WomakersCode x Instituto Localiza · Squad Katherine Johnson</h3>
+
+<br>
+
+<!-- =============================== -->
+<!-- ========== BADGES ============= -->
+<!-- =============================== -->
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/Google_Colab-Notebook-orange?logo=googlecolab&logoColor=white">
+  <img src="https://img.shields.io/badge/Power_BI-Dashboard-F2C811?logo=powerbi&logoColor=black">
+  <img src="https://img.shields.io/badge/Kaggle-Dataset-20BEFF?logo=kaggle&logoColor=white">
+  <img src="https://img.shields.io/badge/ETL-Data%20Pipeline-green">
+  <img src="https://img.shields.io/badge/Status-Concluído-success">
+</p>
+
+<br>
 
 ---
 
-### 1. Descrição
+# 📚 **Sumário**
+- [1. Descrição](#-1-descrição)
+- [2. Objetivo](#-2-objetivo)
+- [3. Arquitetura do Projeto](#-3-arquitetura-do-projeto)
+- [4. Passos de Execução](#-4-passos-de-execução)
+  - [4.0 Como clonar o repositório](#-40--como-clonar-o-repositório)
+  - [4.0.1 Como abrir o notebook no Google Colab](#-401--como-abrir-o-notebook-no-google-colab)
+  - [4.0.2 Como abrir o relatório no Power BI](#-402--como-abrir-o-relatório-no-power-bi)
+  - [4.1 Extração (BRONZE)](#-41--extração-bronze)
+  - [4.2 Transformação (SILVER)](#-42--transformação-silver)
+  - [4.3 Consolidação (GOLD)](#-43--consolidação-gold)
+  - [4.4 Visualização no Power BI](#-44--visualização-power-bi)
+- [5. Resultados](#-5-resultados)
+- [6. Autores](#-6-autores)
+
+---
+
+# ✔️ **1. Descrição**
 
 Este projeto de **ETL (Extract, Transform, Load)** e **Visualização de Dados** foi desenvolvido como parte do desafio de **Business Intelligence (BI)** do bootcamp oferecido pela **WomakersCode** em parceria com o **Instituto Localiza**. A execução e análise foram realizadas pela *Squad Katherine Johnson*.
 
@@ -10,9 +49,14 @@ O projeto tem como base um cenário hipotético: a abertura de uma nova cafeteri
 
 ---
 
-### 2. Objetivo
+# 🎯 **2. Objetivo**
 
-O objetivo principal é transformar dados brutos de consumo de café em informações estratégicas e *insights* acionáveis, utilizando um processo de ETL estruturado e visualizações interativas no **Power BI**.
+Transformar dados brutos em **informações estratégicas**, aplicando:
+
+- ETL com Python (Colab)
+- Arquitetura Lakehouse (Bronze → Silver → Gold)
+- Dashboards interativos no Power BI
+- Insights para apoiar decisões de negócio
 
 As análises visam responder às seguintes hipóteses de negócio para direcionar a estratégia da nova cafeteria:
 
@@ -24,7 +68,7 @@ As análises visam responder às seguintes hipóteses de negócio para direciona
 
 ---
 
-### 3. Estrutura do Projeto
+### 🏛️ 3. Estrutura do Projeto
 
 O projeto adota uma arquitetura de *Data Lakehouse* com três camadas distintas (*Bronze, Silver, Gold*), garantindo a rastreabilidade, qualidade e organização dos dados.
 
@@ -42,43 +86,107 @@ O projeto adota uma arquitetura de *Data Lakehouse* com três camadas distintas 
 
 ---
 
-### 4. Passos de Execução
-
-Segue o fluxo de trabalho detalhado para replicação do projeto:
-
-#### **4.1. Configuração e Extração (Bronze)**
-
-1.  **Download do Dataset:** Obter o arquivo CSV ou o *dataset* completo da fonte Kaggle.
-2.  **Criação dos Schemas/Estruturas:** Criar os três *schemas* ou diretórios de armazenamento (`BRONZE`, `SILVER`, `GOLD`).
-3.  **Carregamento para Bronze:** Ingerir os dados brutos, **sem modificação**, para a camada `BRONZE`.
-
-#### **4.2. Transformação (Silver)**
-
-1.  **Leitura do Bronze:** Ler os dados da camada `BRONZE`.
-2.  **Limpeza e Padronização:**
-    * Tratar valores ausentes (NULLs).
-    * Corrigir *data types* e formatos inconsistentes.
-    * Renomear colunas para maior clareza.
-3.  **Escrita no Silver:** Persistir os dados limpos na camada `SILVER`.
-
-#### **4.3. Consolidacão (Gold)**
-
-1.  **Leitura do Silver:** Ler os dados limpos da camada `SILVER`.
-2.  **Aplicação das Regras de Negócio:**
-    * Criar colunas calculadas relevantes para as hipóteses (ex: categorização de faixa etária).
-    * Realizar agregações e sumarizações necessárias (ex: contagem de frequência de sabores).
-    * Realizar **junções de tabelas** (se houver) para criar o modelo de dados final.
-3.  **Escrita no Gold:** Persistir o modelo de dados final, pronto para consumo, na camada `GOLD`.
-
-#### **4.4. Visualização (Power BI)**
-
-1.  **Conexão com Gold:** Conectar o Power BI à camada `GOLD`.
-2.  **Modelagem de Dados:** Criar o modelo de dados (*relationships*) e definir medidas (DAX).
-3.  **Desenvolvimento do Dashboard:** Construir gráficos e visuais que enderecem diretamente as 5 hipóteses levantadas.
-4.  **Publicação:** Publicar o *report* para compartilhamento.
+# 🚀 4. Passos de Execução
 
 ---
 
-### 5. Resultados e Prints
+## 🔹 4.0 — Como clonar o repositório
 
-O *dashboard* final do Power BI contém visualizações interativas que permitem explorar as tendências de consumo e validar as hipóteses de negócio.
+### **Via HTTPS**
+```bash
+git clone https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git
+```
+### **Via SSH**
+```git clone git@github.com:[katherine-BI/Projeto_ETL]```
+
+###Depois, entre no diretório:
+``` cd "Projeto_ETL" ```
+
+## 🔹 4.0.1 — Como abrir o notebook no Google Colab
+
+### **Opção 1 — Abrir direto pelo botão “Open in Colab”**
+- Acesse o arquivo `.ipynb` no GitHub  
+- Clique no botão **Open in Colab**
+
+---
+
+### **Opção 2 — Abrir pelo site do Colab**
+- Acesse: https://colab.research.google.com  
+- Vá em **File → Open Notebook**  
+- Clique na aba **GitHub**  
+- Pesquise o nome do repositório  
+- Selecione o arquivo `.ipynb`
+
+---
+
+### **Opção 3 — Upload manual**
+- Baixe o arquivo `.ipynb`  
+- No Colab: **File → Upload**  
+- Selecione o notebook  
+
+---
+
+## 🔹 4.0.2 — Como abrir o relatório no Power BI
+
+### **Arquivo local (.pbix)**
+- Instale o **Power BI Desktop**:  
+  https://www.microsoft.com/pt-br/download/details.aspx?id=58494  
+- Clique duas vezes no arquivo `.pbix` dentro do repositório  
+- O relatório será carregado automaticamente  
+
+---
+
+### **Arquivo na nuvem**
+- Faça o download do arquivo `.pbix`  
+- Abra no **Power BI Desktop** normalmente  
+
+---
+
+## 🔸 4.1 — Extração (BRONZE)
+- Baixar dataset do Kaggle  
+- Criar diretórios: `BRONZE`, `SILVER`, `GOLD`  
+- Armazenar o dataset original na camada **BRONZE**  
+
+---
+
+## 🔸 4.2 — Transformação (SILVER)
+
+- Ler dados da camada **BRONZE**  
+- Aplicar transformações:
+  - Tratamento de nulos  
+  - Ajuste de tipos  
+  - Padronização  
+  - Renomeação de colunas  
+- Persistir dados transformados na camada **SILVER**
+
+---
+
+## 🔸 4.3 — Consolidação (GOLD)
+
+- Ler dados da camada **SILVER**  
+- Criar regras de negócio:
+  - Cálculos  
+  - Agregações  
+  - Junções  
+  - Métricas  
+- Salvar o modelo final na camada **GOLD**  
+
+---
+
+## 🔸 4.4 — Visualização (Power BI)
+
+- Conectar o Power BI à camada **GOLD**  
+- Criar o modelo relacional e medidas DAX  
+- Construir o dashboard respondendo às 5 hipóteses  
+- Publicar no Power BI Service (opcional)  
+
+---
+
+## 🖼️ 5. Resultados e Prints
+
+O dashboard final apresenta visualizações interativas que permitem explorar tendências de consumo de café, validar hipóteses e identificar oportunidades estratégicas para a nova cafeteria.
+
+---
+
+### Autor
+Squad Katherine Johnson - Bootcamp BI WomakersCode 
